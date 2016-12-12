@@ -76,7 +76,7 @@ window.onload = function () {
 <?php
 
 $i=0; //counter for bombs
-$sql="select * from sale, user , card where UID = SUID and CID = SCID"; //select all bomb information from DB
+$sql="select * from sale, user , card where UID = SUID and CID = SCID order by timer desc"; //select all bomb information from DB
 $res=mysqli_query($conn,$sql) or die("db error");
 $arr = array(); //define an array for bombs
 echo "<table width='100' border='1'>
