@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2016-12-04 06:57:53
+-- 產生時間： 2016-12-12 08:44:33
 -- 伺服器版本: 10.1.16-MariaDB
 -- PHP 版本： 7.0.9
 
@@ -36,8 +36,14 @@ CREATE TABLE `card` (
 --
 
 INSERT INTO `card` (`CID`, `cardname`) VALUES
-(1, 'super'),
-(2, 'hsb');
+(1, 'C1'),
+(2, 'C2'),
+(3, 'C3'),
+(4, 'C4'),
+(5, 'C5'),
+(6, 'C6'),
+(7, 'C7'),
+(8, 'C8');
 
 -- --------------------------------------------------------
 
@@ -88,8 +94,14 @@ CREATE TABLE `mycard` (
 --
 
 INSERT INTO `mycard` (`MID`, `MCID`, `account`, `MUID`) VALUES
-(1, 1, 0, 1),
-(2, 2, 1, 1);
+(1, 1, 33, 1),
+(2, 2, 33, 1),
+(3, 3, 33, 1),
+(4, 8, 30, 1),
+(5, 4, 33, 1),
+(6, 5, 33, 1),
+(7, 6, 33, 1),
+(8, 7, 33, 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +131,34 @@ INSERT INTO `sale` (`SID`, `timer`, `SUID`, `SCID`, `saleAccount`, `salePrice`) 
 (6, '2016-12-03 00:57:22', 1, 2, 1, 10),
 (7, '2016-12-03 01:09:21', 1, 2, 1, 10),
 (8, '2016-12-03 14:47:50', 1, 2, 1, 1),
-(9, '2016-12-04 13:58:34', 1, 2, 1, 1);
+(9, '2016-12-04 13:58:34', 1, 2, 1, 1),
+(10, '2016-12-10 15:11:08', 2, 5, 3, 356),
+(11, '2016-12-10 15:11:10', 2, 3, 3, 239),
+(12, '2016-12-10 15:12:11', 2, 4, 3, 367),
+(13, '2016-12-10 15:11:13', 2, 1, 3, 299),
+(14, '2016-12-10 15:11:14', 2, 2, 3, 291),
+(15, '2016-12-10 15:12:36', 2, 1, 3, 387),
+(16, '2016-12-10 15:32:24', 2, 7, 3, 65),
+(17, '2016-12-10 15:32:32', 2, 3, 3, 64),
+(18, '2016-12-10 15:33:39', 2, 7, 3, 85),
+(19, '2016-12-10 15:33:53', 2, 4, 3, 60),
+(20, '2016-12-10 15:40:28', 2, 2, 3, 51),
+(21, '2016-12-10 15:45:31', 2, 2, 3, 51),
+(22, '2016-12-10 15:50:35', 2, 2, 3, 51),
+(23, '2016-12-10 15:56:24', 2, 2, 3, 51),
+(24, '2016-12-10 16:01:25', 2, 2, 3, 51),
+(25, '2016-12-10 16:07:50', 2, 2, 3, 51),
+(26, '2016-12-10 16:13:29', 2, 2, 3, 51),
+(27, '2016-12-10 16:18:30', 2, 2, 3, 51),
+(28, '2016-12-10 16:26:38', 2, 2, 3, 51),
+(29, '2016-12-10 16:31:39', 2, 2, 3, 51),
+(30, '2016-12-10 16:36:41', 2, 2, 3, 51),
+(31, '2016-12-10 16:41:49', 2, 2, 3, 51),
+(32, '2016-12-10 16:46:51', 2, 2, 3, 51),
+(33, '2016-12-10 16:52:02', 2, 2, 3, 51),
+(34, '2016-12-10 16:57:47', 2, 2, 3, 51),
+(35, '2016-12-10 17:04:40', 2, 8, 3, 24),
+(36, '2016-12-10 17:04:42', 2, 8, 3, 24);
 
 -- --------------------------------------------------------
 
@@ -139,7 +178,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UID`, `loginID`, `password`, `money`) VALUES
-(1, 'test', '123', 0);
+(1, 'test', '123', 2000),
+(2, 'boss', '123', 1000);
 
 --
 -- 已匯出資料表的索引
@@ -183,7 +223,7 @@ ALTER TABLE `user`
 -- 使用資料表 AUTO_INCREMENT `card`
 --
 ALTER TABLE `card`
-  MODIFY `CID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `CID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- 使用資料表 AUTO_INCREMENT `history`
 --
@@ -193,17 +233,17 @@ ALTER TABLE `history`
 -- 使用資料表 AUTO_INCREMENT `mycard`
 --
 ALTER TABLE `mycard`
-  MODIFY `MID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `MID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- 使用資料表 AUTO_INCREMENT `sale`
 --
 ALTER TABLE `sale`
-  MODIFY `SID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `SID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- 使用資料表 AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `UID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `UID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
