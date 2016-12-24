@@ -40,7 +40,7 @@ window.onload = function () {
 	//check the bomb status every 1 second
     setInterval(function () {
 		Bag()
-    }, 1000*60*60*24); //12小時送一次福袋
+    }, 1000*60*3); //12小時送一次福袋
 };
 </script>
 </head>
@@ -53,7 +53,7 @@ $res=mysqli_query($conn,$sql) or die("db error"); //define an array for bombs
 $row=mysqli_fetch_assoc($res);
 $randcard = rand(1,8); //隨機卡片
 $randprice = rand(10,100); //隨機價錢
-$randtime = rand(1,2); // 隨機時間
+$randtime = rand(1,1); // 隨機時間
 echo "<script>var UID =". $row['UID'] ."</script>";
 echo "<script>var CID =". $randcard ."</script>";
 echo "<script>var Price =". $randprice ."</script>";

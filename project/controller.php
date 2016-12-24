@@ -1,3 +1,16 @@
+<html>
+<style>
+body{
+  background-color: #18BC9C;
+  color: white;
+  padding: 80px;
+  font-family: arial;
+  text-align: center;
+  font-size:40px;
+}
+</style>
+
+<body>
 <?php
 session_start();
 require("User.php");
@@ -14,7 +27,8 @@ switch($act) {
 			//set login session mark
 			$_SESSION['uID'] = $loginName;
 			echo "login OK<br>";
-			echo "<a href='mycard.php'>Home</a>";
+			echo header("Location: startbootstrap-freelancer-gh-pages\index.html");
+			//echo "<a href='startbootstrap-freelancer-gh-pages\index.html'>Home</a>";
 		} else {
 			//set login mark to empty
 			$_SESSION['uID'] = "";
@@ -24,3 +38,5 @@ switch($act) {
 	default:
 }
 ?>
+</body>
+</html>

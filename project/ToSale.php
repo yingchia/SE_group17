@@ -13,5 +13,5 @@ $sql = "insert into sale (SUID, SCID, saleAccount, salePrice, timer)
 $res=mysqli_query($conn,$sql) or die("db error");
 $sql="update mycard set account = account - '$saleaccount' where MUID = $uid and MCID = $cid";
 $res=mysqli_query($conn,$sql) or die("error");
-echo $time."分鐘";
+echo "拍賣時間".$time."分鐘";
 ?>

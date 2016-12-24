@@ -8,5 +8,5 @@ $newtime = date("Y-m-d H:i:s",strtotime("+ 420 minutes"));//現在時間
 $sql = "insert into history (HUID, HSID, hisprice, histime) 
 				values ('$uid', '$sid', '$buyprice', '$newtime');";
 $res=mysqli_query($conn,$sql) or die("db error");
-echo $newtime;
+echo "出價成功";
 ?>

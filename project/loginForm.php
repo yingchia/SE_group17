@@ -1,7 +1,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
+<style>
+body{
+  background-color: #18BC9C;
+  color: white;
+}
+table, th, td {
+    border: 2px solid white;
+	border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+    text-align: center;
+    font-family: arial;
+	font-size:25px;
+}
+
+</style>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>無標題文件</title>
+<title>登入畫面</title>
 </head>
 <body>
 <center>
@@ -10,6 +27,7 @@ session_start();
 //set the login mark to empty
 $_SESSION['uID'] = "";
 ?>
+
 <h1>Login Form</h1><hr />
 <form method="post" action="controller.php">
 	<input type="hidden" name="act" value="login">

@@ -12,5 +12,5 @@ for($n=1;$n<=8;$n++){
 }
 $addmoney = "update user set money = money + '$money' where loginID = '$myname'" ;
 $result=mysqli_query($conn,$addmoney) or die("db error");
-echo "獲得".$money;
+echo "獲得".$money."元";
 ?>
